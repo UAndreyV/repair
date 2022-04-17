@@ -1,0 +1,157 @@
+.header {
+    width: 100%;
+    padding: 50px 0px;
+    margin: 0px 0px 60px 0px;
+
+    @media (min-width: 600px) {
+        margin: 0px 0px 140px 0px;
+    }
+
+    // .header__content
+
+    &__content {
+        text-align: center;
+        @media (min-width: 1100px) {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    // .header__info
+
+    &__info {
+        margin: 0px 0px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: 1100px) {
+            margin: 0px 20px 0px 0px;
+            max-width: 50%;
+        }
+
+        & p {
+            font-style: italic;
+            font-weight: 400;
+            font-size: var(--font-size-20);
+            line-height: var(--font-size-50);
+            position: relative;
+            margin: 0px auto 20px auto;
+            padding: 0px 0px 0px 20px;
+
+            @media (min-width: 420px) {
+                font-size: var(--font-size-40);
+            }
+
+            @media (min-width: 770px) {
+                width: 60%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: var(--color-text);
+                }
+            }
+            @media (min-width: 1100px) {
+                width: 100%;
+                margin: 0px 0px 20px 20px;
+            }
+
+            @media (min-width: 1280px) {
+                margin: 0px 0px auto 20px;
+            }
+        }
+    }
+
+    // .header__pluses
+
+    &__pluses {
+        & ul {
+            @media (min-width: 580px) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & li {
+                background: radial-gradient(
+                            52.56% 94.78% at 13.08% -33.91%,
+                            rgba(247, 0, 0, 0.48) 0%,
+                            rgba(255, 255, 255, 0) 100%
+                        )
+                        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                    radial-gradient(
+                            50.43% 123.65% at 85.65% 110.43%,
+                            rgba(243, 222, 207, 0.2) 0%,
+                            rgba(247, 105, 0, 0.2) 100%
+                        )
+                        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                    linear-gradient(77.31deg, #ff6c00 0.8%, #ff7e1f 0.81%, #ff9241 100%);
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: var(--font-size-20);
+                line-height: var(--font-size-28);
+                text-align: center;
+                color: var(--color-white);
+                padding: var(--font-size-24);
+                &:not(:last-child) {
+                    margin: 0px 0px 20px 0px;
+                }
+
+                @media (min-width: 580px) {
+                    width: 33.3333333%;
+                    &:not(:last-child) {
+                        margin: 0px 20px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    // .header__form
+
+    &__form {
+        max-width: 400px;
+        border-radius: 5px;
+        background: var(--color-light-gray);
+        border: 1px solid var(--color-gray);
+        padding: 45px 40px 30px;
+        margin: 0 auto;
+
+        @media (min-width: 1100px) {
+            margin: 0px 0px 0px 0px;
+        }
+
+        & h4 {
+            margin: 0px 0px 40px 0px;
+        }
+
+        & p {
+            margin: 0px 0px 30px 0px;
+        }
+
+        & fieldset {
+            margin: 0px 0px 40px 0px;
+            & input {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 350px;
+                padding: 5px 15px;
+                border: 1px solid var(--color-gray);
+                border-radius: 5px;
+
+                &:nth-child(1) {
+                    margin: 0px auto 20px;
+                }
+            }
+        }
+
+        & button {
+            margin: 0 auto 40px;
+        }
+    }
+}

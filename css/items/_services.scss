@@ -1,0 +1,68 @@
+.services {
+    margin: 0px auto 60px;
+
+    @media (min-width: 600px) {
+        margin: 0px auto 140px;
+    }
+    // .services__content
+
+    &__content {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            grid-auto-rows: 1fr;
+
+            & li {
+                background-color: var(--color-light-gray);
+                border: 1px solid var(--color-gray);
+                border-radius: 5px;
+                padding: var(--font-size-20);
+                transition: transform var(--time-trans) ease;
+
+                & h3 {
+                    text-align: center;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        transform: scale(1.075);
+                        background: radial-gradient(
+                                    52.56% 94.78% at 13.08% -33.91%,
+                                    rgba(247, 0, 0, 0.48) 0%,
+                                    rgba(255, 255, 255, 0) 100%
+                                )
+                                /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                            radial-gradient(
+                                    50.43% 123.65% at 85.65% 110.43%,
+                                    rgba(243, 222, 207, 0.024) 99.99%,
+                                    rgba(247, 105, 0, 0.2) 100%
+                                )
+                                /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                            linear-gradient(77.31deg, #ff7e1f 0.81%, #ff6c00 0.82%, #ff9241 100%);
+
+                        & h3 {
+                            color: var(--color-white);
+                        }
+
+                        .services__image {
+                            & svg {
+                                & path {
+                                    stroke: var(--color-white);
+                                    stroke-width: 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .services__image
+
+    &__image {
+        text-align: center;
+        margin: 0px 0px 10px 0px;
+    }
+}

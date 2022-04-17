@@ -1,0 +1,23 @@
+.faq {
+    margin: 0px auto 60px;
+
+    @media (min-width: 600px) {
+        margin: 0px auto 140px;
+    }
+
+    & details {
+        &:not(:last-child) {
+            margin: 0px 0px 1rem 0px;
+        }
+
+        & summary {
+            margin: 0px 0px 1rem 0px;
+            font-size: var(--font-size-18);
+            cursor: pointer;
+        }
+
+        & p {
+            margin: 0px 0px 0px 20px;
+        }
+    }
+}
