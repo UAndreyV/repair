@@ -20,7 +20,8 @@
                 line-height: var(--font-size-24);
                 text-align: center;
                 text-transform: uppercase;
-                margin: 0px 0px var(--font-size-20) 0px;
+                margin: 0px auto var(--font-size-20);
+                max-width: 280px;
             }
 
             &:not(:last-child) {
@@ -28,7 +29,9 @@
             }
 
             @media (min-width: 380px) {
-                margin: 0px 0px 0px 0px;
+                &:not(:last-child) {
+                    margin: 0px 0px 0px 0px;
+                }
             }
         }
 

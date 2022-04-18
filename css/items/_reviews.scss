@@ -1,13 +1,10 @@
 .reviews {
-    display: none;
-    @media (min-width: 850px) {
-        display: block;
-    }
-    margin: 0px auto 140px;
-    & ul {
-        display: flex;
-        justify-content: space-between;
+    margin: 0px auto 60px;
 
+    @media (min-width: 600px) {
+        margin: 0px auto 140px;
+    }
+    & ul {
         & li {
             & p {
                 font-style: italic;
@@ -23,22 +20,40 @@
                 display: block;
                 margin: 0px 15px;
 
-                position: relative;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 160px;
-                    height: 32px;
-                    right: 0;
-                    top: 0;
-                    background-image: url(../img/star.svg);
-                    background-repeat: no-repeat;
+                @media (min-width: 360px) {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 160px;
+                        height: 32px;
+                        right: 0;
+                        top: 0;
+                        background-image: url(../img/star.svg);
+                        background-repeat: no-repeat;
+                    }
                 }
             }
+        }
+    }
 
-            &:not(:last-child) {
-                margin: 0px 30px 0px 0px;
-            }
+    &__slider {
+        position: relative;
+    }
+}
+
+.swiper {
+    margin: 0px 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-dark-gray);
+    transition: color var(--time-trans) ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-accent);
         }
     }
 }

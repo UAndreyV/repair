@@ -271,7 +271,7 @@
         <div class="about__title">
           <h2>О нас</h2>
           <p>Ремонт всего в чем бегает электрический ток!</p>
-          <button class="btn">Бесплатная консультация</button>
+          <button data-popup class="btn">Бесплатная консультация</button>
         </div>
         <ul>
           <li>Ремонт ноутбуков, компьютеров,планшеты, телефоны;</li>
@@ -367,20 +367,26 @@
       </section>
       <section class="reviews container">
         <h2>Отзывы</h2>
-        <ul>
-          <li>
-            <p>Здесь будет отзыв довольного клиента</p>
-            <span>Алена</span>
-          </li>
-          <li>
-            <p>Здесь будет отзыв довольного клиента</p>
-            <span>Алена</span>
-          </li>
-          <li>
-            <p>Здесь будет отзыв довольного клиента</p>
-            <span>Алена</span>
-          </li>
-        </ul>
+        <div class="reviews__slider">
+          <div class="swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <p>Здесь будет отзыв довольного клиента</p>
+                <span>Алена</span>
+              </li>
+              <li class="swiper-slide">
+                <p>Здесь будет отзыв довольного клиента</p>
+                <span>Алена</span>
+              </li>
+              <li class="swiper-slide">
+                <p>Здесь будет отзыв довольного клиента</p>
+                <span>Алена</span>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </section>
       <section class="faq container">
         <h2>Частые вопросы</h2>
@@ -477,6 +483,28 @@
       <p><a href="#contacts">г. Омск, Лаптева 3/1 </a></p>
     </footer>
   </div>
+  <div class="popup display-none">
+    <form action="">
+      <h4>Бесплатная консультация</h4>
+      <p>
+        Оставьте свои контактные данные и мы свяжемся с Вами в ближайшее
+        время!
+      </p>
+      <fieldset>
+        <input type="text" name="name" placeholder="Имя" />
+        <input type="text" name="tel" placeholder="Телефон" />
+      </fieldset>
+      <button class="btn">ОТПРАВИТЬ</button>
+      <div class="politica">
+        Нажимая кнопку “Отпрвить” Вы даете согласие на обработку
+        персональных данных
+      </div>
+      <span class="popup__closed">&times;</span>
+    </form>
+
+  </div>
+  <script src="js/swiper.js/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

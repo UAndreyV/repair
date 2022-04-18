@@ -1,0 +1,20 @@
+.display-none {
+    display: none;
+}
+
+.block-hidden {
+    overflow: hidden;
+}
+
+.appearance {
+    animation: appearance 0.3s;
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

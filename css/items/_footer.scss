@@ -24,8 +24,10 @@
         & span {
             color: var(--color-white);
             transition: color var(--time-trans) ease;
-            @media (any-hover: hover) {
-                &:hover {
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                & span {
                     color: var(--color-accent);
                 }
             }

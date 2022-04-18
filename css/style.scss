@@ -31,28 +31,6 @@
   margin: 0 auto;
 }
 
-.btn {
-  display: block;
-  margin: 0px 0px 0px auto;
-  background-color: var(--color-green);
-  color: var(--color-white);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: var(--font-family);
-  padding: 15px 40px;
-  border-radius: 10px;
-  transition: filter var(--time-trans) ease, transform var(--time-trans) ease;
-}
-@media (any-hover: hover) {
-  .btn:hover {
-    filter: brightness(95%);
-    transform: scale(1.03);
-  }
-}
-.btn:active {
-  filter: brightness(85%);
-}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -94,13 +72,17 @@
 
 @import "items/_min.scss";
 @import "items/_h.scss";
+@import "items/_button.scss";
 @import "items/_top.scss";
 @import "items/_header.scss";
 @import "items/_services.scss";
 @import "items/_about.scss";
 @import "items/_advantages.scss";
 @import "items/_feedback.scss";
-@import "items/_reviews.scss";
 @import "items/_faq.scss";
 @import "items/_contacts.scss";
 @import "items/_footer.scss";
+@import "items/_popup.scss";
+@import "items/_view.scss";
+@import "swiper/swiper-bundle.scss";
+@import "items/_reviews.scss";
