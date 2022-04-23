@@ -77,6 +77,33 @@ window.addEventListener("DOMContentLoaded", () => {
         //showModalByTime('.popup-consultation', 5000);
     }());
 
+    //sticky menu
+    (function scrollTopMenu() {
+        const topMenu = document.querySelector('.header__top');
+
+        let a = 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset;
+
+            if (scrollTop >= 250) {
+                topMenu.classList.add('top-menu-scroll');
+                if (scrollTop > a) {
+                    topMenu.classList.add('menu-hide');
+                    topMenu.classList.remove('menu-show');
+                } else {
+                    topMenu.classList.remove('menu-hide');
+                    topMenu.classList.add('menu-show');
+                }
+            } else {
+                topMenu.classList.remove('top-menu-scroll');
+            }
+
+            a = scrollTop;
+        });
+
+    }());
+
     //swiper
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
